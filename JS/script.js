@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Preloader
+    // Preloader - Updated for faster loading (only change is here)
     const preloader = document.querySelector('.preloader');
     
     window.addEventListener('load', function() {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 preloader.style.display = 'none';
             }, 500);
-        }, 1000);
+        }, 500); // 👈 Changed from 1000ms to 500ms
     });
 
     // Navbar scroll effect
@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.transition = 'all 0.5s cubic-bezier(0.65, 0, 0.35, 1)';
     });
 });
+
 // Infinite horizontal scroll for services
 document.addEventListener('DOMContentLoaded', function() {
     const servicesTrack = document.querySelector('.services-track');
@@ -191,6 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 // Pricing card hover effects
 document.querySelectorAll('.pricing-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
@@ -209,9 +211,10 @@ document.querySelectorAll('.pricing-card').forEach(card => {
         }
     });
 });
+
 document.querySelectorAll('.pricing-button').forEach(button => {
     button.addEventListener('click', function() {
       // Handle button click (redirect or show form)
       window.location.href = '/signup?plan=' + this.dataset.plan;
     });
-  });
+});
